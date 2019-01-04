@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "355463820815",
+    "firebase_url": "https://attendance-app-d5010.firebaseio.com",
+    "project_id": "attendance-app-d5010",
+    "storage_bucket": "attendance-app-d5010.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355463820815:android:8b4e60052d844244",
+        "android_client_info": {
+          "package_name": "com.jonytf.attendanceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355463820815-7qr1hps75jg9nh35crc8pfk06rr2dogp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnFug3OhnW5TeSAggNslMitUNSobk-HsE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

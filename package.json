@@ -1,0 +1,28 @@
+{
+    "nativescript": {
+        "id": "com.jonytf.attendanceapp",
+        "tns-ios": {
+            "version": "5.1.0"
+        },
+        "tns-android": {
+            "version": "5.1.0"
+        }
+    },
+    "description": "NativeScript Application",
+    "license": "SEE LICENSE IN <your-license-filename>",
+    "repository": "<fill-your-repository-here>",
+    "dependencies": {
+        "nativescript-floatingactionbutton": "^5.0.0",
+        "nativescript-fonticon": "^2.0.0",
+        "nativescript-plugin-firebase": "^7.6.0",
+        "nativescript-ripple": "^2.1.0",
+        "nativescript-theme-core": "~1.0.4",
+        "nativescript-ui-listview": "^5.0.1",
+        "nativescript-uuid": "0.0.1",
+        "tns-core-modules": "5.1.1"
+    },
+    "devDependencies": {
+        "nativescript-dev-webpack": "0.18.5"
+    },
+    "readme": "NativeScript Application"
+}

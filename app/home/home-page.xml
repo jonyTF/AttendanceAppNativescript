@@ -1,0 +1,55 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns:lv="nativescript-ui-listview"
+    xmlns:FAB="nativescript-floatingactionbutton"
+    xmlns:RL="nativescript-ripple"
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+>
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Rooms"></Label>
+        <ActionBar.actionItems>
+            <ActionItem>
+                <ActionItem.actionView>
+                    <Button text="Settings" class="action-item" />
+                </ActionItem.actionView>
+            </ActionItem>
+        </ActionBar.actionItems>
+    </ActionBar>
+
+    <GridLayout rows="auto, *">
+        <Label row="0" class="h2 text-center" id="welcome-text" text="{{ welcomeText }}" textWrap="true" />
+        <!--<Label row="0" class="h2 text-center" id="info-text" text="You have not joined any rooms!" textWrap="true"></Label>-->
+        
+        <lv:RadListView 
+            id="rooms-list" 
+            row="1" 
+            class="list-group" 
+            items="{{ rooms }}"
+            selectionBehavior="LongPress"
+            multipleSelection="true"
+            itemSelected="onItemSelected"
+            itemDeselected="onItemDeselected"
+        >
+            <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemInsertAnimation="Scale" itemDeleteAnimation="Scale"/>
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+                <RL:Ripple>
+                    <GridLayout class="list-group-item" rows="auto, *, auto" columns="80, *, auto">
+                        <Image row="0" col="0" src="https://placem.at/people?w=80&txt=0" class="thumb img-circle" rowSpan="2"></Image>
+                        <Label row="0" col="1" text="{{ name }}" class="list-group-item-heading" textWrap="true" />
+                        <Label row="1" col="1" text="{{ description }}" class="list-group-item-text" textWrap="true" />
+                        <Label row="0" col="2" text="{{ code }}" class="font-weight-bold list-group-item-text" rowSpan="2" />
+                    </GridLayout>
+                </RL:Ripple>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+
+        <FAB:fab tap="{{ joinRoom }}"
+            row="1"
+            icon="res://add_white"
+            rippleColor="#f1f1f1"
+            class="fab-button" />
+    </GridLayout>
+</Page>

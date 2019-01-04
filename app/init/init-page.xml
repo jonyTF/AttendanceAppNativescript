@@ -1,0 +1,16 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Init"></Label>
+    </ActionBar>
+    
+    <FlexboxLayout>
+        <StackLayout class="form">
+            <TextField hint="First name" text="{{ firstName }}" class="input input-border" />
+            <TextField hint="Last name" text="{{ lastName }}" class="input input-border" />
+            <Button text="Continue" tap="{{ onTap }}" class="btn btn-primary" />
+        </StackLayout>
+    </FlexboxLayout>
+</Page>
