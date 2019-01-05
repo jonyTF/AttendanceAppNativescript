@@ -43,6 +43,7 @@ function HomeViewModel() {
                                         '/rooms/' + r.text + '/members',
                                         {[global.uuid]: true}
                                     ).then(() => {
+                                        firebase.subscribeToTopic(r.text);
                                         //alert('Successfully joined room with code "' + r.text + '"');
                                     });
                                 });

@@ -15,6 +15,16 @@ firebase.init({
         global.authenticated = data.loggedIn;
         global.uuid = uuidModule.getUUID();
     },
+    onMessageReceivedCallback: function(message) {
+      console.log(message);
+    },
+    onPushTokenReceivedCallback: function(token) {
+      console.log("CALLBACK Firebase push token: " + token);
+      firebase.update('/users/' + global.uuid, {
+        token: token
+      });
+    },
+    showNotificationsWhenInForeground: true,
     persist: true,
 }).then(
     function () {
@@ -24,6 +34,13 @@ firebase.init({
       console.log("firebase.init error: " + error);
     }
 );
+
+firebase.getCurrentPushToken().then(token => {
+  console.log("GOT Firebase push token: " + token);
+  firebase.update('/users/' + global.uuid, {
+    token: token
+  });
+});
 
 //firebase.logout();
 
